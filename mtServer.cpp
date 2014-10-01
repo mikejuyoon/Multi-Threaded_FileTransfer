@@ -1,20 +1,13 @@
 /*
-* Course: CS 100 Fall 2013
-*
 * First Name: Ju Yong
 * Last Name: Yoon
-* Username: jyoon017
-* email address: jyoon017@ucr.edu
+* Email address: mikejuyoon@gmail.com
 *
-*
-* Assignment: Homework 9, Due 12/06/13
+* Server that sends client files
 * File: mtServer.cpp
 *
 * I hereby certify that the contents of this file represent
-* my own original individual work. Nowhere herein is there
-* code from any outside resources such as another individual,
-* a website, or publishings unless specifically designated as
-* permissible by the instructor or TA.
+* my own original individual work.
 */
 
 #include <stdio.h>
@@ -37,7 +30,6 @@
 using namespace std;
 
 void sendThisFile(int currfd, int clientfd){
-	
 	struct stat buf;
 	fstat(currfd, &buf);
 	int fsize = buf.st_size;
